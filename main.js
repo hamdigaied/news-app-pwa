@@ -21,5 +21,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 newsContainer.appendChild(newsItem);
             });
         })
-        .catch(error => newsContainer.innerHTML = '<h3>No articles</h2>');
+        .catch(error => newsContainer.innerHTML = '<h3>No articles</h3>');
 });

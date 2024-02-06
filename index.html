@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News App PWA</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -16,6 +17,13 @@
     <div id="news-container"></div>
 
     <script src="main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => console.log('SW has been registred succedsfully', registration))
+                .catch(error => console.log('An error has occured while registring sw.js', error))
+        }
+    </script>
 </body>
 
 </html>
